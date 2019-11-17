@@ -1,0 +1,26 @@
+vue中的挂载页面index.html路径是在webpack.dev.conf.js下配置的，
+
+找到plugins下面的
+
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'index.html',
+      inject: true
+    }),
+以上便是挂载页面的配置，其中
+filename是输出的文件名，默认是index.html
+template是依赖的模板，修改这个就能改变挂载的模板路径
+
+例如
+
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'src/index.html',
+      inject: true
+    }),
+以上配置将启用src下的index.html路径。
+--------------------- 
+作者：VegasLemon 
+来源：CSDN 
+原文：https://blog.csdn.net/VegasLemon/article/details/88910013 
+版权声明：本文为博主原创文章，转载请附上博文链接！
